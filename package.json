@@ -1,0 +1,27 @@
+{
+  "name": "starwarswiki",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "gaxios": "^5.0.0",
+    "googleapis": "^100.0.0",
+    "node-fetch": "^2.6.7",
+    "node-sass": "^7.0.1",
+    "pinia": "^2.0.14",
+    "sass": "^1.52.2",
+    "sass-loader": "^13.0.0",
+    "vue": "^3.2.36",
+    "vue-router": "^4.0.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "vite": "^2.9.9"
+  }
+}
