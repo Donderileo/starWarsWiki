@@ -14,11 +14,15 @@ export const starWarsStore = defineStore("starWars", {
       species: {},
       vehicles: {},
       starships: {},
+      busy: false,
     };
   },
   actions: {
     async getMoreCharacters() {
-      console.log("Called");
+      if (!this.next) {
+        return;
+      }
+      this.busy = true;
       const data = await getDataFromAPI(this.next);
       this.next = data.next;
       const results = data.results;
@@ -28,6 +32,7 @@ export const starWarsStore = defineStore("starWars", {
         ch.id = this.quantity;
       });
       this.characters = this.characters.concat(results);
+      this.busy = false;
     },
     async checkFilms(films) {
       films.forEach(async (film) => {
@@ -37,7 +42,6 @@ export const starWarsStore = defineStore("starWars", {
       });
     },
     async checkHomeworld(homeworld) {
-      console.log(homeworld);
       if (!this.homeworlds[homeworld]) {
         this.homeworlds[homeworld] = await getDataFromAPI(homeworld);
       }
