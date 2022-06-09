@@ -1,7 +1,13 @@
 <template>
   <header>
     <div class="text-group">
-      <p class="title">Star Wars Wiki <img src="images/duel.png" alt="" /></p>
+      <p class="title">
+        Star Wars Wiki
+        <img
+          src="/images/duel.png"
+          alt="Sabres de luz um vermelho e outro azul em formato de X"
+        />
+      </p>
       <p class="page-text">{{ texto }}</p>
     </div>
   </header>

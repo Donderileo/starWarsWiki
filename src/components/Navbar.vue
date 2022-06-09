@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <img src="images/logo-nav.svg" alt="Logo Star Wars" />
+    <img src="/images/logo-nav.svg" alt="Logo Star Wars" />
   </nav>
 </template>
 
