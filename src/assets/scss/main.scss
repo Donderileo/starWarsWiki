@@ -1,0 +1,50 @@
+@import "_variables";
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+body,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("images/background.jpg");
+}
+html {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+
+  @media (max-width: $medium) {
+    font-size: 12px;
+  }
+
+  @media (max-width: $small) {
+    font-size: 10px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $black;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: $black;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: $yellow-logo;
+}

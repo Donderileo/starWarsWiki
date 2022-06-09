@@ -1,16 +1,23 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
-</script>
-
 <template>
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-  </nav>
+  <Navbar />
   <main class="content">
-    <RouterView />
+    <transition>
+      <RouterView />
+    </transition>
   </main>
 </template>
+<script>
+import { RouterLink, RouterView } from "vue-router";
+import Navbar from "@/components/Navbar.vue";
 
+export default {
+  components: {
+    RouterLink,
+    RouterView,
+    Navbar,
+  },
+};
+</script>
 <style lang="scss">
 * {
   margin: 0;
@@ -19,8 +26,8 @@ import { RouterLink, RouterView } from "vue-router";
 .content {
   padding: 1rem;
 
-  @media (min-width: 768px) {
-    padding: 2rem;
+  @media (min-width: $small) {
+    padding: 2rem 10rem;
   }
 }
 </style>

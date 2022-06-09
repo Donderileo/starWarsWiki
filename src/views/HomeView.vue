@@ -1,7 +1,6 @@
 <template>
+  <Header texto="Lista de personagens" />
   <main>
-    <button @click="store.getMoreCharacters">GetMore!</button>
-    {{ store.busy }}
     <div class="cards" ref="scrollComponent">
       <div
         class="card"
@@ -28,7 +27,11 @@
 import { onMounted, onUnmounted, ref } from "vue";
 import { starWarsStore } from "@/stores/starWars.js";
 import { useRouter } from "vue-router";
+import Header from "@/components/Header.vue";
 export default {
+  components: {
+    Header,
+  },
   setup() {
     const store = starWarsStore();
     const router = useRouter();
@@ -66,14 +69,23 @@ export default {
 <style lang="scss">
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  color: $white;
+
+  @media (min-width: $small) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $medium) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 .card {
   img {
     width: 90%;
     height: auto;
-    border: 4px solid black;
+    border: 4px solid $white;
   }
 }
 </style>
