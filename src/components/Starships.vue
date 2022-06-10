@@ -22,7 +22,7 @@
         </Starship>
       </div>
     </div>
-    <div class="full" v-else>This caracther don't have starships</div>
+    <div class="full" v-else>This character don't have any starships</div>
   </div>
 </template>
 
