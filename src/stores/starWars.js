@@ -35,11 +35,11 @@ export const starWarsStore = defineStore("starWars", {
       this.busy = false;
     },
     async checkFilms(films) {
-      films.forEach(async (film) => {
-        if (!this.films[film]) {
-          this.films[film] = await getDataFromAPI(film);
+      for (let i = 0; i < films.length; i++) {
+        if (!this.films[films[i]]) {
+          this.films[films[i]] = await getDataFromAPI(films[i]);
         }
-      });
+      }
     },
     async checkHomeworld(homeworld) {
       if (!this.homeworlds[homeworld]) {
@@ -47,25 +47,25 @@ export const starWarsStore = defineStore("starWars", {
       }
     },
     async checkSpecies(species) {
-      species.forEach(async (specie) => {
-        if (!this.species[specie]) {
-          this.species[specie] = await getDataFromAPI(specie);
+      for (let i = 0; i < species.length; i++) {
+        if (!this.species[species[i]]) {
+          this.species[species[i]] = await getDataFromAPI(species[i]);
         }
-      });
+      }
     },
     async checkVehicles(vehicles) {
-      vehicles.forEach(async (vehicle) => {
-        if (!this.vehicles[vehicle]) {
-          this.vehicles[vehicle] = await getDataFromAPI(vehicle);
+      for (let i = 0; i < vehicles.length; i++) {
+        if (!this.vehicles[vehicles[i]]) {
+          this.vehicles[vehicles[i]] = await getDataFromAPI(vehicles[i]);
         }
-      });
+      }
     },
     async checkStarships(starships) {
-      starships.forEach(async (starship) => {
-        if (!this.starships[starship]) {
-          this.starships[starship] = await getDataFromAPI(starship);
+      for (let i = 0; i < starships.length; i++) {
+        if (!this.starships[starships[i]]) {
+          this.starships[starships[i]] = await getDataFromAPI(starships[i]);
         }
-      });
+      }
     },
   },
 });
