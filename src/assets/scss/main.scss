@@ -20,15 +20,19 @@ body {
   background-image: url("/images/background.jpg");
 }
 html {
-  font-size: 16px;
   font-weight: 500;
-  font-family: "Raleway", sans-serif;
+  font-family: "Kanit", sans-serif;
+  font-size: 14px;
 
   @media (max-width: $medium) {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   @media (max-width: $small) {
+    font-size: 12px;
+  }
+
+  @media (max-width: $mobile) {
     font-size: 10px;
   }
 }
@@ -48,3 +52,5 @@ html {
   border-radius: 10px;
   background: $yellow-logo;
 }
+
+/*Overwrite UI components */
