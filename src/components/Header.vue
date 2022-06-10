@@ -8,7 +8,7 @@
           alt="Sabres de luz um vermelho e outro azul em formato de X"
         />
       </p>
-      <p class="page-text">{{ texto }}</p>
+      <p class="page-text">{{ text }}</p>
     </div>
   </header>
 </template>
@@ -19,7 +19,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "Header",
   props: {
-    texto: {
+    text: {
       type: String,
       default: "",
     },
@@ -29,6 +29,8 @@ export default defineComponent({
 
 <style scoped lang="scss">
 header {
+  font-family: "Raleway", sans-serif;
+
   display: flex;
   justify-content: center;
   padding: 3rem 0;
@@ -36,9 +38,10 @@ header {
   gap: 1rem;
 
   .title {
-    color: $yellow-logo;
+    color: $black;
     font-size: 4rem;
     font-weight: 900;
+    -webkit-text-stroke: 1px $yellow-logo;
   }
   .page-text {
     color: $white;

@@ -26,8 +26,8 @@ export default {
 .content {
   padding: 1rem;
 
-  @media (min-width: $small) {
-    padding: 2rem 10rem;
+  @media (min-width: $medium) {
+    padding: 2rem 2rem;
   }
 }
 </style>

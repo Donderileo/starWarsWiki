@@ -1,6 +1,10 @@
 <template>
   <nav>
-    <img src="/images/logo-nav.svg" alt="Logo Star Wars" />
+    <img
+      src="/images/logo-nav.svg"
+      alt="Logo Star Wars"
+      @click="$router.push('/')"
+    />
   </nav>
 </template>
 
@@ -24,6 +28,7 @@ nav {
 
   img {
     max-width: 100%;
+    cursor: pointer;
   }
 }
 </style>
